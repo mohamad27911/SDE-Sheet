@@ -15,3 +15,12 @@ class Solution(object):
             current = current.next
         
         return current
+    def middleNode2(self, head):
+      
+        fast = slow = head
+        while fast and fast.next:
+            slow = slow.next
+            fast = fast.next.next
+        return slow
+
+# Alternative solution
